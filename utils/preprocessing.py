@@ -125,13 +125,13 @@ def aggregate_to_quarterly(df: pd.DataFrame, date_column: str = "fecha") -> pd.D
     agg_dict = {
         "total_pixeles": "median",
         "Suma_de_radianza_trend": ["sum", "median", "std", "mean"],
-        "Media_de_radianza_trend": "mean",
-        "Desviacion_estandar_de_radianza_trend": "mean",
-        "Maximo_de_radianza_trend": "max",
-        "Minimo_de_radianza_trend": "min",
-        "Percentil_25_de_radianza_trend": "mean",
-        "Percentil_50_de_radianza_trend": "mean",
-        "Percentil_75_de_radianza_trend": "mean",
+        "Media_de_radianza_trend": ["sum", "median", "std", "mean"],
+        "Desviacion_estandar_de_radianza_trend": ["sum", "median", "std", "mean"],
+        "Maximo_de_radianza_trend": ["sum", "median", "std", "mean"],
+        "Minimo_de_radianza_trend":["sum", "median", "std", "mean"],
+        "Percentil_25_de_radianza_trend":["sum", "median", "std", "mean"],
+        "Percentil_50_de_radianza_trend":["sum", "median", "std", "mean"],
+        "Percentil_75_de_radianza_trend":["sum", "median", "std", "mean"],
     }
     
     # Filtrar solo las columnas que existen en el DataFrame
