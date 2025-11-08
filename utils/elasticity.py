@@ -15,7 +15,7 @@ def get_elasticity(x: np.ndarray, y: np.ndarray, plot: bool = False) -> float:
     delta_y = Y[1:] - Y[:-1]
 
     # Evitar divisiones por valores muy pequeños
-    mask = np.abs(delta_x) > 1e-5
+    mask = np.abs(delta_x) > 1e-3
 
     elasticity = delta_y[mask] / delta_x[mask]
     elasticity_avg = np.mean(elasticity)
